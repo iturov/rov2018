@@ -6,6 +6,8 @@ data_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 send_data = '0,0,0,0,0,0,0,0,0,0'
 recv_data = None
 
+log = open("log.txt", "w") #Need full path here
+
 def _initialize(ip = '192.168.2.2', port = 1864):
     global server_socket
     global client_address
@@ -16,8 +18,10 @@ def _initialize(ip = '192.168.2.2', port = 1864):
         server_socket.bind(ip,port)
         client_address = server_socket.accept()
         print ('Connection established successfully.')
+        print ('Connection established successfully.', file = log)
     except:
         print('ERROR: Connection Error !')
+        print('ERROR: Connection Error !', file = log)
     
 def _send_data():
     global client_address
@@ -39,6 +43,7 @@ def _recv_data():
             recv_data = server_socket.recv(1024)
         except:
             print ('ERROR: Cannot receive data !')
+            print ('ERROR: Cannot receive data !', file = log)
             break
         
         if not recv_data:
@@ -50,7 +55,9 @@ def _recv_data():
             except:
                 pass
     print('Receiving data:\t' + data_array)
+    print('Receiving data:\t' + data_array, file = log)
     
 def kill():
     global client_socket
-client_socket.close()
+    client_socket.close()
+    log.close()
