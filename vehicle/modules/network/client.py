@@ -1,60 +1,44 @@
 import socket
+from printer import log
+from printer import log_error
 
-client_socket = None
-data_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-send_data = '0,0,0,0,0,0,0,0,0,0'
-recv_data = None
-
-log = open("log.txt", "w") #Need full path here
-
-def _initialize(ip = '192.168.2.2', port= 1864):
-    global client_socket
+class Client(object):
+    def __init__(self,server_ip,port,buffer_size=1024,send_data="",recv_data=""):
+        self.client_ip = socket.gethostbyname(socket.gethostname())
+        self.server_ip = server_ip
+        self.port = port
+        self.buffer_size = buffer_size
+        self.send_data = send_data
+        self.recv_data = recv_data
+        self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        print("Socket created")
+        log("Socket created")
     
-    print ('Connecting: ' + ip + ':' + str(port))
-    try:
-        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket.connect((ip, port))
-        print ('Connection established successfully.')
-        print ('Connection established successfully.', file = log)
-    except:
-        print('ERROR: Connection Error !') 
-        print('ERROR: Connection Error !', file = log) 
-    
-def _send_data():
-    global client_socket
-    global send_data
-    
-    while True:
-        try:        
-            client_socket.send(send_data + "\n")
-        except:
-            pass
-            
-def _recv_data():
-    global client_socket
-    global data_array
-    global recv_data
-    
-    while True:
+    def connect(self):
         try:
-            recv_data = client_socket.recv(1024)
-        except:
-            print ('ERROR: Cannot receive data !')
-            print ('ERROR: Cannot receive data !', file = log)
-            break
+            self.client_socket.connect((self.server_ip,self.port))
+            print("Connection established")
+            log("Connection established")
+        except TimeoutError:
+            print("ERROR: Server is not responding")
+            log_error("Server is not responding")
+        except OSError:
+            print("ERROR: No Connection found")
+            log_error("No Connection found")
         
-        if not recv_data:
-            break
-        else:
-            array = recv_data.split(",")
-            try:
-                data_array = [int(x) for x in array]
-            except:
-                pass
-    print('Receiving data:\t' + data_array)
-    print('Receiving data:\t' + data_array , file = log)
-
-def kill():
-    global client_socket
-    client_socket.close()
-    log.close()
+    def send(self,data):
+        self.send_data = data
+        self.client_socket.send(self.send_data)
+        print("Sending Data: ", self.send_data)
+        log("Sending Data: ", self.send_data)
+    
+    def recv(self):
+        self.recv_data = self.client_socket.recv(self.buffer_size)
+        print("Receiving Data: ", self.recv_data)
+        log("Receiving Data: ", self.recv_data)
+        return self.recv_data
+        
+    def kill(self):
+        self.client_socket.close()
+        print("Socket closed")
+        log("Socket closed")
