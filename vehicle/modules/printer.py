@@ -10,7 +10,7 @@ def error_decorator(error_func):
 @error_decorator
 def log(log_msg):
     print(str(datetime.now()) + "\t" + log_msg, file = logpad)
-    
+
 @error_decorator
 def log_error(error_msg):
     print(str(datetime.now()) + "\t" + error_msg, file = logpad)
