@@ -1,6 +1,0 @@
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\bin\Debug\MersinSocketAsync.dll
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\bin\Debug\MersinSocketAsync.pdb
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.csproj.CoreCompileInputs.cache
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.dll
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.pdb
-C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.csprojResolveAssemblyReference.cache
