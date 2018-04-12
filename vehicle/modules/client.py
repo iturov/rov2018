@@ -1,6 +1,22 @@
 import socket
-from printer import log
-from printer import log_error
+from datetime import datetime
+
+logpad = open("log.txt", "w") # May need full path here
+
+def error_decorator(error_func):
+    def wrapper(*arg):
+        print("ERROR: ", end="", file = logpad)
+        return error_func(*arg)
+    return wrapper
+
+@error_decorator
+def log(log_msg):
+    print(str(datetime.now()) + "\t" + log_msg, file = logpad)
+
+@error_decorator
+def log_error(error_msg):
+    print(str(datetime.now()) + "\t" + error_msg, file = logpad)
+
 
 class Client(object):
     def __init__(self,server_ip,port,buffer_size=1024,send_data="",recv_data=""):
@@ -13,7 +29,7 @@ class Client(object):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print("Socket created")
         log("Socket created")
-    
+
     def connect(self):
         try:
             self.client_socket.connect((self.server_ip,self.port))
@@ -25,19 +41,20 @@ class Client(object):
         except OSError:
             print("ERROR: No Connection found")
             log_error("No Connection found")
-        
+
     def send(self,data):
         self.send_data = data
         self.client_socket.send(self.send_data)
         print("Sending Data: ", self.send_data)
         log("Sending Data: ", self.send_data)
-    
+
     def recv(self):
+
         self.recv_data = self.client_socket.recv(self.buffer_size)
         print("Receiving Data: ", self.recv_data)
         log("Receiving Data: ", self.recv_data)
         return self.recv_data
-        
+
     def kill(self):
         self.client_socket.close()
         print("Socket closed")
