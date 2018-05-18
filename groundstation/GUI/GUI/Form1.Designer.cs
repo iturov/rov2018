@@ -125,6 +125,12 @@
             this.lblGyroValues = new MetroFramework.Controls.MetroLabel();
             this.timerModel = new System.Windows.Forms.Timer(this.components);
             this.btnLiftbagOFF = new MetroFramework.Controls.MetroButton();
+            this.btnValveTurn = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.valve1 = new MetroFramework.Controls.MetroLabel();
+            this.valve4 = new MetroFramework.Controls.MetroLabel();
+            this.valve3 = new MetroFramework.Controls.MetroLabel();
+            this.valve2 = new MetroFramework.Controls.MetroLabel();
             this.windSpeedPanel.SuspendLayout();
             this.TabControlIPCams.SuspendLayout();
             this.IPCAMPANEL1.SuspendLayout();
@@ -134,6 +140,7 @@
             this.obsGraphPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OBSgraph)).BeginInit();
             this.tidalTurbinePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // logTimer
@@ -165,7 +172,7 @@
             this.windSpeedPanel.HorizontalScrollbarBarColor = true;
             this.windSpeedPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.windSpeedPanel.HorizontalScrollbarSize = 10;
-            this.windSpeedPanel.Location = new System.Drawing.Point(23, 95);
+            this.windSpeedPanel.Location = new System.Drawing.Point(23, 42);
             this.windSpeedPanel.Name = "windSpeedPanel";
             this.windSpeedPanel.Size = new System.Drawing.Size(233, 276);
             this.windSpeedPanel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -543,7 +550,7 @@
             // lblwindSpeedPanel
             // 
             this.lblwindSpeedPanel.AutoSize = true;
-            this.lblwindSpeedPanel.Location = new System.Drawing.Point(23, 73);
+            this.lblwindSpeedPanel.Location = new System.Drawing.Point(23, 20);
             this.lblwindSpeedPanel.Name = "lblwindSpeedPanel";
             this.lblwindSpeedPanel.Size = new System.Drawing.Size(146, 19);
             this.lblwindSpeedPanel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -624,7 +631,7 @@
             this.IPCameraPanel.HorizontalScrollbarBarColor = true;
             this.IPCameraPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.IPCameraPanel.HorizontalScrollbarSize = 10;
-            this.IPCameraPanel.Location = new System.Drawing.Point(746, 95);
+            this.IPCameraPanel.Location = new System.Drawing.Point(746, 42);
             this.IPCameraPanel.Name = "IPCameraPanel";
             this.IPCameraPanel.Size = new System.Drawing.Size(600, 551);
             this.IPCameraPanel.TabIndex = 3;
@@ -637,7 +644,7 @@
             this.lblAirCraftModel.AutoSize = true;
             this.lblAirCraftModel.BackColor = System.Drawing.Color.White;
             this.lblAirCraftModel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblAirCraftModel.Location = new System.Drawing.Point(708, 334);
+            this.lblAirCraftModel.Location = new System.Drawing.Point(1319, 676);
             this.lblAirCraftModel.Name = "lblAirCraftModel";
             this.lblAirCraftModel.Size = new System.Drawing.Size(27, 19);
             this.lblAirCraftModel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -648,9 +655,9 @@
             // btnLiftbagRelease
             // 
             this.btnLiftbagRelease.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagRelease.Location = new System.Drawing.Point(264, 211);
+            this.btnLiftbagRelease.Location = new System.Drawing.Point(746, 605);
             this.btnLiftbagRelease.Name = "btnLiftbagRelease";
-            this.btnLiftbagRelease.Size = new System.Drawing.Size(100, 48);
+            this.btnLiftbagRelease.Size = new System.Drawing.Size(100, 50);
             this.btnLiftbagRelease.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagRelease.TabIndex = 5;
             this.btnLiftbagRelease.TabStop = false;
@@ -661,7 +668,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(598, 334);
+            this.metroLabel7.Location = new System.Drawing.Point(1209, 676);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(104, 19);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
@@ -709,7 +716,7 @@
             this.obsTablePanel.HorizontalScrollbarBarColor = true;
             this.obsTablePanel.HorizontalScrollbarHighlightOnWheel = false;
             this.obsTablePanel.HorizontalScrollbarSize = 10;
-            this.obsTablePanel.Location = new System.Drawing.Point(23, 407);
+            this.obsTablePanel.Location = new System.Drawing.Point(23, 459);
             this.obsTablePanel.Name = "obsTablePanel";
             this.obsTablePanel.Size = new System.Drawing.Size(154, 288);
             this.obsTablePanel.TabIndex = 7;
@@ -1195,7 +1202,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(23, 385);
+            this.metroLabel8.Location = new System.Drawing.Point(23, 437);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(72, 19);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1206,7 +1213,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(183, 385);
+            this.metroLabel10.Location = new System.Drawing.Point(183, 437);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(78, 19);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1221,7 +1228,7 @@
             this.obsGraphPanel.HorizontalScrollbarBarColor = true;
             this.obsGraphPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.obsGraphPanel.HorizontalScrollbarSize = 10;
-            this.obsGraphPanel.Location = new System.Drawing.Point(183, 407);
+            this.obsGraphPanel.Location = new System.Drawing.Point(183, 459);
             this.obsGraphPanel.Name = "obsGraphPanel";
             this.obsGraphPanel.Size = new System.Drawing.Size(554, 288);
             this.obsGraphPanel.TabIndex = 10;
@@ -1258,13 +1265,14 @@
             // metroLabel28
             // 
             this.metroLabel28.AutoSize = true;
-            this.metroLabel28.Location = new System.Drawing.Point(264, 73);
+            this.metroLabel28.Location = new System.Drawing.Point(264, 20);
             this.metroLabel28.Name = "metroLabel28";
             this.metroLabel28.Size = new System.Drawing.Size(139, 19);
             this.metroLabel28.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel28.TabIndex = 2;
             this.metroLabel28.Text = "Tidal Turbine Location:";
             this.metroLabel28.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel28.Click += new System.EventHandler(this.metroLabel28_Click);
             // 
             // tidalTurbinePanel
             // 
@@ -1284,13 +1292,14 @@
             this.tidalTurbinePanel.HorizontalScrollbarBarColor = true;
             this.tidalTurbinePanel.HorizontalScrollbarHighlightOnWheel = false;
             this.tidalTurbinePanel.HorizontalScrollbarSize = 10;
-            this.tidalTurbinePanel.Location = new System.Drawing.Point(264, 95);
+            this.tidalTurbinePanel.Location = new System.Drawing.Point(264, 42);
             this.tidalTurbinePanel.Name = "tidalTurbinePanel";
             this.tidalTurbinePanel.Size = new System.Drawing.Size(473, 110);
             this.tidalTurbinePanel.TabIndex = 11;
             this.tidalTurbinePanel.VerticalScrollbarBarColor = true;
             this.tidalTurbinePanel.VerticalScrollbarHighlightOnWheel = false;
             this.tidalTurbinePanel.VerticalScrollbarSize = 10;
+            this.tidalTurbinePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tidalTurbinePanel_Paint);
             // 
             // label5
             // 
@@ -1514,9 +1523,9 @@
             // btnOBSStart
             // 
             this.btnOBSStart.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnOBSStart.Location = new System.Drawing.Point(380, 211);
+            this.btnOBSStart.Location = new System.Drawing.Point(958, 605);
             this.btnOBSStart.Name = "btnOBSStart";
-            this.btnOBSStart.Size = new System.Drawing.Size(100, 100);
+            this.btnOBSStart.Size = new System.Drawing.Size(50, 50);
             this.btnOBSStart.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnOBSStart.TabIndex = 12;
             this.btnOBSStart.TabStop = false;
@@ -1527,9 +1536,9 @@
             // btnDistance
             // 
             this.btnDistance.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnDistance.Location = new System.Drawing.Point(504, 211);
+            this.btnDistance.Location = new System.Drawing.Point(1014, 605);
             this.btnDistance.Name = "btnDistance";
-            this.btnDistance.Size = new System.Drawing.Size(100, 100);
+            this.btnDistance.Size = new System.Drawing.Size(80, 50);
             this.btnDistance.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnDistance.TabIndex = 13;
             this.btnDistance.TabStop = false;
@@ -1540,7 +1549,7 @@
             // metroLabel000
             // 
             this.metroLabel000.AutoSize = true;
-            this.metroLabel000.Location = new System.Drawing.Point(647, 243);
+            this.metroLabel000.Location = new System.Drawing.Point(1047, 676);
             this.metroLabel000.Name = "metroLabel000";
             this.metroLabel000.Size = new System.Drawing.Size(60, 19);
             this.metroLabel000.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1553,7 +1562,7 @@
             this.lblmeasuredDistance.AutoSize = true;
             this.lblmeasuredDistance.BackColor = System.Drawing.Color.White;
             this.lblmeasuredDistance.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblmeasuredDistance.Location = new System.Drawing.Point(651, 264);
+            this.lblmeasuredDistance.Location = new System.Drawing.Point(1113, 676);
             this.lblmeasuredDistance.Name = "lblmeasuredDistance";
             this.lblmeasuredDistance.Size = new System.Drawing.Size(53, 19);
             this.lblmeasuredDistance.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1563,15 +1572,15 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(747, 675);
+            this.progressBar.Location = new System.Drawing.Point(746, 727);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(599, 20);
+            this.progressBar.Size = new System.Drawing.Size(600, 20);
             this.progressBar.TabIndex = 16;
             // 
             // logLabel
             // 
             this.logLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logLabel.Location = new System.Drawing.Point(747, 651);
+            this.logLabel.Location = new System.Drawing.Point(747, 703);
             this.logLabel.Name = "logLabel";
             this.logLabel.Size = new System.Drawing.Size(600, 23);
             this.logLabel.TabIndex = 17;
@@ -1585,7 +1594,7 @@
             // lblGyroValues
             // 
             this.lblGyroValues.AutoSize = true;
-            this.lblGyroValues.Location = new System.Drawing.Point(264, 334);
+            this.lblGyroValues.Location = new System.Drawing.Point(746, 676);
             this.lblGyroValues.Name = "lblGyroValues";
             this.lblGyroValues.Size = new System.Drawing.Size(271, 19);
             this.lblGyroValues.TabIndex = 18;
@@ -1598,9 +1607,9 @@
             // btnLiftbagOFF
             // 
             this.btnLiftbagOFF.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagOFF.Location = new System.Drawing.Point(264, 263);
+            this.btnLiftbagOFF.Location = new System.Drawing.Point(852, 605);
             this.btnLiftbagOFF.Name = "btnLiftbagOFF";
-            this.btnLiftbagOFF.Size = new System.Drawing.Size(100, 48);
+            this.btnLiftbagOFF.Size = new System.Drawing.Size(100, 50);
             this.btnLiftbagOFF.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagOFF.TabIndex = 5;
             this.btnLiftbagOFF.TabStop = false;
@@ -1608,16 +1617,81 @@
             this.btnLiftbagOFF.UseSelectable = true;
             this.btnLiftbagOFF.Click += new System.EventHandler(this.btnLiftbagOFF_Click);
             // 
+            // btnValveTurn
+            // 
+            this.btnValveTurn.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValveTurn.Location = new System.Drawing.Point(1100, 605);
+            this.btnValveTurn.Name = "btnValveTurn";
+            this.btnValveTurn.Size = new System.Drawing.Size(90, 50);
+            this.btnValveTurn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValveTurn.TabIndex = 13;
+            this.btnValveTurn.TabStop = false;
+            this.btnValveTurn.Text = "Turn Valve";
+            this.btnValveTurn.UseSelectable = true;
+            this.btnValveTurn.Click += new System.EventHandler(this.btnDistance_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.OBS;
+            this.pictureBox1.Location = new System.Drawing.Point(392, 184);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(238, 215);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // valve1
+            // 
+            this.valve1.AutoSize = true;
+            this.valve1.Location = new System.Drawing.Point(337, 197);
+            this.valve1.Name = "valve1";
+            this.valve1.Size = new System.Drawing.Size(47, 19);
+            this.valve1.TabIndex = 20;
+            this.valve1.Text = "Valve 1";
+            // 
+            // valve4
+            // 
+            this.valve4.AutoSize = true;
+            this.valve4.Location = new System.Drawing.Point(636, 197);
+            this.valve4.Name = "valve4";
+            this.valve4.Size = new System.Drawing.Size(49, 19);
+            this.valve4.TabIndex = 20;
+            this.valve4.Text = "Valve 4";
+            // 
+            // valve3
+            // 
+            this.valve3.AutoSize = true;
+            this.valve3.Location = new System.Drawing.Point(636, 357);
+            this.valve3.Name = "valve3";
+            this.valve3.Size = new System.Drawing.Size(49, 19);
+            this.valve3.TabIndex = 20;
+            this.valve3.Text = "Valve 3";
+            // 
+            // valve2
+            // 
+            this.valve2.AutoSize = true;
+            this.valve2.Location = new System.Drawing.Point(335, 357);
+            this.valve2.Name = "valve2";
+            this.valve2.Size = new System.Drawing.Size(49, 19);
+            this.valve2.TabIndex = 20;
+            this.valve2.Text = "Valve 2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.valve2);
+            this.Controls.Add(this.valve3);
+            this.Controls.Add(this.valve4);
+            this.Controls.Add(this.valve1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblGyroValues);
             this.Controls.Add(this.logLabel);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.lblmeasuredDistance);
             this.Controls.Add(this.metroLabel000);
+            this.Controls.Add(this.btnValveTurn);
             this.Controls.Add(this.btnDistance);
             this.Controls.Add(this.btnOBSStart);
             this.Controls.Add(this.tidalTurbinePanel);
@@ -1660,6 +1734,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OBSgraph)).EndInit();
             this.tidalTurbinePanel.ResumeLayout(false);
             this.tidalTurbinePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1759,6 +1834,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroTextBox txtairspeedAs;
         private MetroFramework.Controls.MetroButton btnLiftbagOFF;
+        private MetroFramework.Controls.MetroButton btnValveTurn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLabel valve1;
+        private MetroFramework.Controls.MetroLabel valve4;
+        private MetroFramework.Controls.MetroLabel valve3;
+        private MetroFramework.Controls.MetroLabel valve2;
     }
 }
 

@@ -299,5 +299,15 @@ namespace GUI
                 logLabel.Text = ekl.ToString();
             }
         }
+
+        private void metroLabel28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tidalTurbinePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

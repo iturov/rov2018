@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\OBS.png" />
     <None Include="Resources\logoBox.png" />
   </ItemGroup>
   <ItemGroup>
