@@ -164,3 +164,9 @@ while True:
         GPIO.output(DIR, 0)
         turn_valve()
         GPIO.output(4,GPIO.LOW) # Power OFF
+    elif(recv_data == "b'Kill'"):
+        DuzceSocketClient.kill()
+        log("Application Closed")
+        logpad.close()
+        GPIO.cleanup()
+        break
