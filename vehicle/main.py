@@ -5,13 +5,16 @@ from bs4 import BeautifulSoup
 import requests
 import socket
 from datetime import datetime
-
+import RPi.GPIO as GPIO
 
 # definitions
 recv_data = ""
 angles = ""
 data = ""
 loop = True
+DIR = 20   # Direction GPIO Pin
+STEP = 21  # Step GPIO Pin
+delay = .0008
 
 # Logging Code Block Begin
 def error_decorator(error_func):
@@ -120,8 +123,21 @@ def OBS_read():
         except:
             print("Error")
 
+def turn_valve():
+    for x in range(50):
+        GPIO.output(STEP, GPIO.HIGH)
+        sleep(delay)
+        GPIO.output(STEP, GPIO.LOW)
+        sleep(delay)
+
 # setup
 logpad = open("/home/pi/mate/log.txt", "w")
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(DIR, GPIO.OUT)
+GPIO.setup(STEP, GPIO.OUT)
+GPIO.output(DIR, 1)
+GPIO.setup(4, GPIO.OUT)
+GPIO.output(4,GPIO.LOW)
 DuzceSocketClient = Client(server_ip = '192.168.2.1', port = 1864)
 DuzceSocketClient.connect()
 #recvThread = Thread(target=recv, args=(0.01))
@@ -138,3 +154,13 @@ while True:
         liftbagOFF()
     elif(recv_data == "b'OBSeBaglanKanka'"):
         OBS_read()
+    elif(recv_data == "b'TurnerSaatYonu'"):
+        GPIO.output(4,GPIO.HIGH) # Power ON
+        GPIO.output(DIR, 1)
+        turn_valve()
+        GPIO.output(4,GPIO.LOW) # Power OFF
+    elif(recv_data == "b'TurnerSaatTersi'"):
+        GPIO.output(4,GPIO.HIGH) # Power ON
+        GPIO.output(DIR, 0)
+        turn_valve()
+        GPIO.output(4,GPIO.LOW) # Power OFF
