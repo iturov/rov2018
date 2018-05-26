@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -125,12 +125,13 @@
             this.lblGyroValues = new MetroFramework.Controls.MetroLabel();
             this.timerModel = new System.Windows.Forms.Timer(this.components);
             this.btnLiftbagOFF = new MetroFramework.Controls.MetroButton();
-            this.btnValveTurn = new MetroFramework.Controls.MetroButton();
+            this.btnValveTurnCW = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.valve1 = new MetroFramework.Controls.MetroLabel();
             this.valve4 = new MetroFramework.Controls.MetroLabel();
             this.valve3 = new MetroFramework.Controls.MetroLabel();
             this.valve2 = new MetroFramework.Controls.MetroLabel();
+            this.btnValveTurnCCW = new MetroFramework.Controls.MetroButton();
             this.windSpeedPanel.SuspendLayout();
             this.TabControlIPCams.SuspendLayout();
             this.IPCAMPANEL1.SuspendLayout();
@@ -174,7 +175,7 @@
             this.windSpeedPanel.HorizontalScrollbarSize = 10;
             this.windSpeedPanel.Location = new System.Drawing.Point(23, 42);
             this.windSpeedPanel.Name = "windSpeedPanel";
-            this.windSpeedPanel.Size = new System.Drawing.Size(233, 276);
+            this.windSpeedPanel.Size = new System.Drawing.Size(233, 288);
             this.windSpeedPanel.Style = MetroFramework.MetroColorStyle.Blue;
             this.windSpeedPanel.TabIndex = 1;
             this.windSpeedPanel.VerticalScrollbarBarColor = true;
@@ -239,7 +240,7 @@
             this.lblaircraftAngle.AutoSize = true;
             this.lblaircraftAngle.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblaircraftAngle.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblaircraftAngle.Location = new System.Drawing.Point(128, 249);
+            this.lblaircraftAngle.Location = new System.Drawing.Point(128, 253);
             this.lblaircraftAngle.Name = "lblaircraftAngle";
             this.lblaircraftAngle.Size = new System.Drawing.Size(42, 15);
             this.lblaircraftAngle.TabIndex = 6;
@@ -250,7 +251,7 @@
             this.lblaircraftDistance.AutoSize = true;
             this.lblaircraftDistance.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblaircraftDistance.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblaircraftDistance.Location = new System.Drawing.Point(24, 249);
+            this.lblaircraftDistance.Location = new System.Drawing.Point(24, 253);
             this.lblaircraftDistance.Name = "lblaircraftDistance";
             this.lblaircraftDistance.Size = new System.Drawing.Size(58, 15);
             this.lblaircraftDistance.TabIndex = 6;
@@ -644,7 +645,7 @@
             this.lblAirCraftModel.AutoSize = true;
             this.lblAirCraftModel.BackColor = System.Drawing.Color.White;
             this.lblAirCraftModel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblAirCraftModel.Location = new System.Drawing.Point(1319, 676);
+            this.lblAirCraftModel.Location = new System.Drawing.Point(1319, 608);
             this.lblAirCraftModel.Name = "lblAirCraftModel";
             this.lblAirCraftModel.Size = new System.Drawing.Size(27, 19);
             this.lblAirCraftModel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -655,9 +656,9 @@
             // btnLiftbagRelease
             // 
             this.btnLiftbagRelease.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagRelease.Location = new System.Drawing.Point(746, 605);
+            this.btnLiftbagRelease.Location = new System.Drawing.Point(23, 359);
             this.btnLiftbagRelease.Name = "btnLiftbagRelease";
-            this.btnLiftbagRelease.Size = new System.Drawing.Size(100, 50);
+            this.btnLiftbagRelease.Size = new System.Drawing.Size(120, 60);
             this.btnLiftbagRelease.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagRelease.TabIndex = 5;
             this.btnLiftbagRelease.TabStop = false;
@@ -668,7 +669,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(1209, 676);
+            this.metroLabel7.Location = new System.Drawing.Point(1209, 608);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(104, 19);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1238,25 +1239,25 @@
             // 
             // OBSgraph
             // 
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderWidth = 10;
-            chartArea1.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend1);
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderWidth = 10;
+            chartArea2.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend2);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.CustomProperties = "IsXAxisQuantitative=False";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series1);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.CustomProperties = "IsXAxisQuantitative=False";
+            series2.IsVisibleInLegend = false;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series2);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
@@ -1523,9 +1524,9 @@
             // btnOBSStart
             // 
             this.btnOBSStart.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnOBSStart.Location = new System.Drawing.Point(958, 605);
+            this.btnOBSStart.Location = new System.Drawing.Point(299, 359);
             this.btnOBSStart.Name = "btnOBSStart";
-            this.btnOBSStart.Size = new System.Drawing.Size(50, 50);
+            this.btnOBSStart.Size = new System.Drawing.Size(60, 60);
             this.btnOBSStart.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnOBSStart.TabIndex = 12;
             this.btnOBSStart.TabStop = false;
@@ -1536,9 +1537,9 @@
             // btnDistance
             // 
             this.btnDistance.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnDistance.Location = new System.Drawing.Point(1014, 605);
+            this.btnDistance.Location = new System.Drawing.Point(377, 359);
             this.btnDistance.Name = "btnDistance";
-            this.btnDistance.Size = new System.Drawing.Size(80, 50);
+            this.btnDistance.Size = new System.Drawing.Size(80, 60);
             this.btnDistance.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnDistance.TabIndex = 13;
             this.btnDistance.TabStop = false;
@@ -1549,7 +1550,7 @@
             // metroLabel000
             // 
             this.metroLabel000.AutoSize = true;
-            this.metroLabel000.Location = new System.Drawing.Point(1047, 676);
+            this.metroLabel000.Location = new System.Drawing.Point(1047, 608);
             this.metroLabel000.Name = "metroLabel000";
             this.metroLabel000.Size = new System.Drawing.Size(60, 19);
             this.metroLabel000.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1562,7 +1563,7 @@
             this.lblmeasuredDistance.AutoSize = true;
             this.lblmeasuredDistance.BackColor = System.Drawing.Color.White;
             this.lblmeasuredDistance.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblmeasuredDistance.Location = new System.Drawing.Point(1113, 676);
+            this.lblmeasuredDistance.Location = new System.Drawing.Point(1113, 608);
             this.lblmeasuredDistance.Name = "lblmeasuredDistance";
             this.lblmeasuredDistance.Size = new System.Drawing.Size(53, 19);
             this.lblmeasuredDistance.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1594,7 +1595,7 @@
             // lblGyroValues
             // 
             this.lblGyroValues.AutoSize = true;
-            this.lblGyroValues.Location = new System.Drawing.Point(746, 676);
+            this.lblGyroValues.Location = new System.Drawing.Point(746, 608);
             this.lblGyroValues.Name = "lblGyroValues";
             this.lblGyroValues.Size = new System.Drawing.Size(271, 19);
             this.lblGyroValues.TabIndex = 18;
@@ -1607,9 +1608,9 @@
             // btnLiftbagOFF
             // 
             this.btnLiftbagOFF.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagOFF.Location = new System.Drawing.Point(852, 605);
+            this.btnLiftbagOFF.Location = new System.Drawing.Point(161, 359);
             this.btnLiftbagOFF.Name = "btnLiftbagOFF";
-            this.btnLiftbagOFF.Size = new System.Drawing.Size(100, 50);
+            this.btnLiftbagOFF.Size = new System.Drawing.Size(120, 60);
             this.btnLiftbagOFF.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagOFF.TabIndex = 5;
             this.btnLiftbagOFF.TabStop = false;
@@ -1617,25 +1618,24 @@
             this.btnLiftbagOFF.UseSelectable = true;
             this.btnLiftbagOFF.Click += new System.EventHandler(this.btnLiftbagOFF_Click);
             // 
-            // btnValveTurn
+            // btnValveTurnCW
             // 
-            this.btnValveTurn.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnValveTurn.Location = new System.Drawing.Point(1100, 605);
-            this.btnValveTurn.Name = "btnValveTurn";
-            this.btnValveTurn.Size = new System.Drawing.Size(90, 50);
-            this.btnValveTurn.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnValveTurn.TabIndex = 13;
-            this.btnValveTurn.TabStop = false;
-            this.btnValveTurn.Text = "Turn Valve";
-            this.btnValveTurn.UseSelectable = true;
-            this.btnValveTurn.Click += new System.EventHandler(this.btnDistance_Click);
+            this.btnValveTurnCW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValveTurnCW.Location = new System.Drawing.Point(475, 359);
+            this.btnValveTurnCW.Name = "btnValveTurnCW";
+            this.btnValveTurnCW.Size = new System.Drawing.Size(120, 60);
+            this.btnValveTurnCW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValveTurnCW.TabIndex = 13;
+            this.btnValveTurnCW.TabStop = false;
+            this.btnValveTurnCW.Text = "Turn Valve Right";
+            this.btnValveTurnCW.UseSelectable = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.OBS;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 184);
+            this.pictureBox1.Location = new System.Drawing.Point(396, 164);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 215);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -1643,7 +1643,7 @@
             // valve1
             // 
             this.valve1.AutoSize = true;
-            this.valve1.Location = new System.Drawing.Point(337, 197);
+            this.valve1.Location = new System.Drawing.Point(343, 164);
             this.valve1.Name = "valve1";
             this.valve1.Size = new System.Drawing.Size(47, 19);
             this.valve1.TabIndex = 20;
@@ -1652,7 +1652,7 @@
             // valve4
             // 
             this.valve4.AutoSize = true;
-            this.valve4.Location = new System.Drawing.Point(636, 197);
+            this.valve4.Location = new System.Drawing.Point(592, 164);
             this.valve4.Name = "valve4";
             this.valve4.Size = new System.Drawing.Size(49, 19);
             this.valve4.TabIndex = 20;
@@ -1661,7 +1661,7 @@
             // valve3
             // 
             this.valve3.AutoSize = true;
-            this.valve3.Location = new System.Drawing.Point(636, 357);
+            this.valve3.Location = new System.Drawing.Point(592, 317);
             this.valve3.Name = "valve3";
             this.valve3.Size = new System.Drawing.Size(49, 19);
             this.valve3.TabIndex = 20;
@@ -1670,11 +1670,23 @@
             // valve2
             // 
             this.valve2.AutoSize = true;
-            this.valve2.Location = new System.Drawing.Point(335, 357);
+            this.valve2.Location = new System.Drawing.Point(341, 317);
             this.valve2.Name = "valve2";
             this.valve2.Size = new System.Drawing.Size(49, 19);
             this.valve2.TabIndex = 20;
             this.valve2.Text = "Valve 2";
+            // 
+            // btnValveTurnCCW
+            // 
+            this.btnValveTurnCCW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValveTurnCCW.Location = new System.Drawing.Point(612, 359);
+            this.btnValveTurnCCW.Name = "btnValveTurnCCW";
+            this.btnValveTurnCCW.Size = new System.Drawing.Size(120, 60);
+            this.btnValveTurnCCW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValveTurnCCW.TabIndex = 13;
+            this.btnValveTurnCCW.TabStop = false;
+            this.btnValveTurnCCW.Text = "Turn Valve Left";
+            this.btnValveTurnCCW.UseSelectable = true;
             // 
             // Form1
             // 
@@ -1691,7 +1703,8 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.lblmeasuredDistance);
             this.Controls.Add(this.metroLabel000);
-            this.Controls.Add(this.btnValveTurn);
+            this.Controls.Add(this.btnValveTurnCCW);
+            this.Controls.Add(this.btnValveTurnCW);
             this.Controls.Add(this.btnDistance);
             this.Controls.Add(this.btnOBSStart);
             this.Controls.Add(this.tidalTurbinePanel);
@@ -1834,12 +1847,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroTextBox txtairspeedAs;
         private MetroFramework.Controls.MetroButton btnLiftbagOFF;
-        private MetroFramework.Controls.MetroButton btnValveTurn;
+        private MetroFramework.Controls.MetroButton btnValveTurnCW;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel valve1;
         private MetroFramework.Controls.MetroLabel valve4;
         private MetroFramework.Controls.MetroLabel valve3;
         private MetroFramework.Controls.MetroLabel valve2;
+        private MetroFramework.Controls.MetroButton btnValveTurnCCW;
     }
 }
 
