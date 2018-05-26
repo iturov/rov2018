@@ -124,7 +124,7 @@ def OBS_read():
             print("Error")
 
 def turn_valve():
-    for x in range(50):
+    for x in range(50): #Quarter Turn
         GPIO.output(STEP, GPIO.HIGH)
         sleep(delay)
         GPIO.output(STEP, GPIO.LOW)
@@ -140,8 +140,6 @@ GPIO.setup(4, GPIO.OUT)
 GPIO.output(4,GPIO.LOW)
 DuzceSocketClient = Client(server_ip = '192.168.2.1', port = 1864)
 DuzceSocketClient.connect()
-#recvThread = Thread(target=recv, args=(0.01))
-#recvThread.start()
 
 # main loop
 while True:
