@@ -123,8 +123,8 @@ def OBS_read():
         except:
             print("Error")
 
-def turn_valve():
-    for x in range(50): #Quarter Turn
+def turn_valve(n):
+    for x in range(200 * n): #Quarter Turn
         GPIO.output(STEP, GPIO.HIGH)
         sleep(delay)
         GPIO.output(STEP, GPIO.LOW)
@@ -145,26 +145,25 @@ DuzceSocketClient.connect()
 while True:
     recv_data = DuzceSocketClient.recv()
     print(recv_data)
-    #print(type(recv_data))
     if(recv_data == "b'LiftbagiSalKanka'"):
         liftbagON()
     elif(recv_data == "b'LiftbagiKapaKanka'):
         liftbagOFF()
     elif(recv_data == "b'OBSeBaglanKanka'"):
         OBS_read()
-    elif(recv_data == "b'TurnerSaatYonu'"):
-        GPIO.output(4,GPIO.HIGH) # Power ON
-        GPIO.output(DIR, 1)
-        turn_valve()
-        GPIO.output(4,GPIO.LOW) # Power OFF
-    elif(recv_data == "b'TurnerSaatTersi'"):
-        GPIO.output(4,GPIO.HIGH) # Power ON
-        GPIO.output(DIR, 0)
-        turn_valve()
-        GPIO.output(4,GPIO.LOW) # Power OFF
+    elif('Turner' in recv_data): # Example: "b'Turner'Clock'0.5'"
+	if('Clock' in recv_data):
+            GPIO.output(4,GPIO.HIGH) # Power ON
+            GPIO.output(DIR, 1)
+            turn_valve(recv_data.split("'")[4])
+            GPIO.output(4,GPIO.LOW) # Power OFF
+	elif('Counter' in recv_data):
+	    GPIO.output(4,GPIO.HIGH) # Power ON
+            GPIO.output(DIR, 0)
+            turn_valve(recv_data.split("'")[4])
+            GPIO.output(4,GPIO.LOW) # Power OFF
     elif(recv_data == "b'Kill'"):
         DuzceSocketClient.kill()
         log("Application Closed")
         logpad.close()
         GPIO.cleanup()
-        break
