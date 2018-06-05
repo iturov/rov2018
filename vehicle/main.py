@@ -124,7 +124,8 @@ def OBS_read():
             print("Error")
 
 def turn_valve(n):
-    for x in range(200 * n): #Quarter Turn
+    angle_value = int(200 * n)
+    for x in range(angle_value):
         GPIO.output(STEP, GPIO.HIGH)
         sleep(delay)
         GPIO.output(STEP, GPIO.LOW)
@@ -155,12 +156,12 @@ while True:
 	if('Clock' in recv_data):
             GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 1)
-            turn_valve(recv_data.split("'")[4])
+            turn_valve(float(recv_data.split("'")[4]))
             GPIO.output(4,GPIO.LOW) # Power OFF
 	elif('Counter' in recv_data):
 	    GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 0)
-            turn_valve(recv_data.split("'")[4])
+            turn_valve(float(recv_data.split("'")[4]))
             GPIO.output(4,GPIO.LOW) # Power OFF
     elif(recv_data == "b'Kill'"):
         DuzceSocketClient.kill()
