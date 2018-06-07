@@ -300,14 +300,39 @@ namespace GUI
             }
         }
 
-        private void metroLabel28_Click(object sender, EventArgs e)
+        public void sendTurnCommand(string direction, string turn) //Example: "Turner'Clock'0.5"
         {
-
+            mServer.SendTo("Turner'"+ direction + "'" + turn);
         }
 
-        private void tidalTurbinePanel_Paint(object sender, PaintEventArgs e)
+        private void btnValve1CCW_Click(object sender, EventArgs e)
         {
+            sendTurnCommand("Counter", "1");
+        }
 
+        private void btnValve1CW_Click(object sender, EventArgs e)
+        {
+            sendTurnCommand("Clock", "1");
+        }
+
+        private void btnValve05CCW_Click(object sender, EventArgs e)
+        {
+            sendTurnCommand("Counter", "0.5");
+        }
+
+        private void btnValve05CW_Click(object sender, EventArgs e)
+        {
+            sendTurnCommand("Clock", "0.5");
+        }
+
+        private void btnTurnLeft_Click(object sender, EventArgs e)
+        {
+            sendTurnCommand("Counter", txtTurnValue.Text);
+        }
+
+        private void btnTurnRight_Click(object sender, EventArgs e)
+        {
+            sendTurnCommand("Clock", txtTurnValue.Text);
         }
     }
 }

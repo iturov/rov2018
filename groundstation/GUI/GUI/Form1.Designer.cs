@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -125,13 +125,20 @@
             this.lblGyroValues = new MetroFramework.Controls.MetroLabel();
             this.timerModel = new System.Windows.Forms.Timer(this.components);
             this.btnLiftbagOFF = new MetroFramework.Controls.MetroButton();
-            this.btnValveTurnCW = new MetroFramework.Controls.MetroButton();
+            this.btnValve1CW = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.valve1 = new MetroFramework.Controls.MetroLabel();
             this.valve4 = new MetroFramework.Controls.MetroLabel();
             this.valve3 = new MetroFramework.Controls.MetroLabel();
             this.valve2 = new MetroFramework.Controls.MetroLabel();
-            this.btnValveTurnCCW = new MetroFramework.Controls.MetroButton();
+            this.btnValve1CCW = new MetroFramework.Controls.MetroButton();
+            this.btnValve05CCW = new MetroFramework.Controls.MetroButton();
+            this.btnValve05CW = new MetroFramework.Controls.MetroButton();
+            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
+            this.txtTurnValue = new MetroFramework.Controls.MetroTextBox();
+            this.btnTurnRight = new MetroFramework.Controls.MetroButton();
+            this.btnTurnLeft = new MetroFramework.Controls.MetroButton();
             this.windSpeedPanel.SuspendLayout();
             this.TabControlIPCams.SuspendLayout();
             this.IPCAMPANEL1.SuspendLayout();
@@ -1239,25 +1246,25 @@
             // 
             // OBSgraph
             // 
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderWidth = 10;
-            chartArea2.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend2);
+            chartArea9.BorderColor = System.Drawing.Color.Transparent;
+            chartArea9.BorderWidth = 10;
+            chartArea9.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea9);
+            legend9.Enabled = false;
+            legend9.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend9);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.CustomProperties = "IsXAxisQuantitative=False";
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series2);
+            series9.BorderWidth = 3;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.CustomProperties = "IsXAxisQuantitative=False";
+            series9.IsVisibleInLegend = false;
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            series9.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series9);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
@@ -1273,7 +1280,6 @@
             this.metroLabel28.TabIndex = 2;
             this.metroLabel28.Text = "Tidal Turbine Location:";
             this.metroLabel28.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel28.Click += new System.EventHandler(this.metroLabel28_Click);
             // 
             // tidalTurbinePanel
             // 
@@ -1300,7 +1306,6 @@
             this.tidalTurbinePanel.VerticalScrollbarBarColor = true;
             this.tidalTurbinePanel.VerticalScrollbarHighlightOnWheel = false;
             this.tidalTurbinePanel.VerticalScrollbarSize = 10;
-            this.tidalTurbinePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tidalTurbinePanel_Paint);
             // 
             // label5
             // 
@@ -1618,22 +1623,23 @@
             this.btnLiftbagOFF.UseSelectable = true;
             this.btnLiftbagOFF.Click += new System.EventHandler(this.btnLiftbagOFF_Click);
             // 
-            // btnValveTurnCW
+            // btnValve1CW
             // 
-            this.btnValveTurnCW.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnValveTurnCW.Location = new System.Drawing.Point(475, 359);
-            this.btnValveTurnCW.Name = "btnValveTurnCW";
-            this.btnValveTurnCW.Size = new System.Drawing.Size(120, 60);
-            this.btnValveTurnCW.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnValveTurnCW.TabIndex = 13;
-            this.btnValveTurnCW.TabStop = false;
-            this.btnValveTurnCW.Text = "Turn Valve Right";
-            this.btnValveTurnCW.UseSelectable = true;
+            this.btnValve1CW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValve1CW.Location = new System.Drawing.Point(667, 182);
+            this.btnValve1CW.Name = "btnValve1CW";
+            this.btnValve1CW.Size = new System.Drawing.Size(70, 70);
+            this.btnValve1CW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValve1CW.TabIndex = 13;
+            this.btnValve1CW.TabStop = false;
+            this.btnValve1CW.Text = "1";
+            this.btnValve1CW.UseSelectable = true;
+            this.btnValve1CW.Click += new System.EventHandler(this.btnValve1CW_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.OBS;
-            this.pictureBox1.Location = new System.Drawing.Point(396, 164);
+            this.pictureBox1.Location = new System.Drawing.Point(326, 164);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(190, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1643,7 +1649,7 @@
             // valve1
             // 
             this.valve1.AutoSize = true;
-            this.valve1.Location = new System.Drawing.Point(343, 164);
+            this.valve1.Location = new System.Drawing.Point(273, 164);
             this.valve1.Name = "valve1";
             this.valve1.Size = new System.Drawing.Size(47, 19);
             this.valve1.TabIndex = 20;
@@ -1652,7 +1658,7 @@
             // valve4
             // 
             this.valve4.AutoSize = true;
-            this.valve4.Location = new System.Drawing.Point(592, 164);
+            this.valve4.Location = new System.Drawing.Point(522, 164);
             this.valve4.Name = "valve4";
             this.valve4.Size = new System.Drawing.Size(49, 19);
             this.valve4.TabIndex = 20;
@@ -1661,7 +1667,7 @@
             // valve3
             // 
             this.valve3.AutoSize = true;
-            this.valve3.Location = new System.Drawing.Point(592, 317);
+            this.valve3.Location = new System.Drawing.Point(522, 317);
             this.valve3.Name = "valve3";
             this.valve3.Size = new System.Drawing.Size(49, 19);
             this.valve3.TabIndex = 20;
@@ -1670,23 +1676,130 @@
             // valve2
             // 
             this.valve2.AutoSize = true;
-            this.valve2.Location = new System.Drawing.Point(341, 317);
+            this.valve2.Location = new System.Drawing.Point(271, 317);
             this.valve2.Name = "valve2";
             this.valve2.Size = new System.Drawing.Size(49, 19);
             this.valve2.TabIndex = 20;
             this.valve2.Text = "Valve 2";
             // 
-            // btnValveTurnCCW
+            // btnValve1CCW
             // 
-            this.btnValveTurnCCW.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnValveTurnCCW.Location = new System.Drawing.Point(612, 359);
-            this.btnValveTurnCCW.Name = "btnValveTurnCCW";
-            this.btnValveTurnCCW.Size = new System.Drawing.Size(120, 60);
-            this.btnValveTurnCCW.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnValveTurnCCW.TabIndex = 13;
-            this.btnValveTurnCCW.TabStop = false;
-            this.btnValveTurnCCW.Text = "Turn Valve Left";
-            this.btnValveTurnCCW.UseSelectable = true;
+            this.btnValve1CCW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValve1CCW.Location = new System.Drawing.Point(586, 182);
+            this.btnValve1CCW.Name = "btnValve1CCW";
+            this.btnValve1CCW.Size = new System.Drawing.Size(70, 70);
+            this.btnValve1CCW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValve1CCW.TabIndex = 13;
+            this.btnValve1CCW.TabStop = false;
+            this.btnValve1CCW.Text = "1";
+            this.btnValve1CCW.UseSelectable = true;
+            this.btnValve1CCW.Click += new System.EventHandler(this.btnValve1CCW_Click);
+            // 
+            // btnValve05CCW
+            // 
+            this.btnValve05CCW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValve05CCW.Location = new System.Drawing.Point(586, 263);
+            this.btnValve05CCW.Name = "btnValve05CCW";
+            this.btnValve05CCW.Size = new System.Drawing.Size(70, 70);
+            this.btnValve05CCW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValve05CCW.TabIndex = 13;
+            this.btnValve05CCW.TabStop = false;
+            this.btnValve05CCW.Text = "0.5";
+            this.btnValve05CCW.UseSelectable = true;
+            this.btnValve05CCW.Click += new System.EventHandler(this.btnValve05CCW_Click);
+            // 
+            // btnValve05CW
+            // 
+            this.btnValve05CW.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnValve05CW.Location = new System.Drawing.Point(667, 263);
+            this.btnValve05CW.Name = "btnValve05CW";
+            this.btnValve05CW.Size = new System.Drawing.Size(70, 70);
+            this.btnValve05CW.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnValve05CW.TabIndex = 13;
+            this.btnValve05CW.TabStop = false;
+            this.btnValve05CW.Text = "0.5";
+            this.btnValve05CW.UseSelectable = true;
+            this.btnValve05CW.Click += new System.EventHandler(this.btnValve05CW_Click);
+            // 
+            // metroLabel30
+            // 
+            this.metroLabel30.AutoSize = true;
+            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel30.Location = new System.Drawing.Point(606, 157);
+            this.metroLabel30.Name = "metroLabel30";
+            this.metroLabel30.Size = new System.Drawing.Size(34, 19);
+            this.metroLabel30.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel30.TabIndex = 2;
+            this.metroLabel30.Text = "Left";
+            // 
+            // metroLabel31
+            // 
+            this.metroLabel31.AutoSize = true;
+            this.metroLabel31.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel31.Location = new System.Drawing.Point(681, 157);
+            this.metroLabel31.Name = "metroLabel31";
+            this.metroLabel31.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel31.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel31.TabIndex = 2;
+            this.metroLabel31.Text = "Right";
+            // 
+            // txtTurnValue
+            // 
+            // 
+            // 
+            // 
+            this.txtTurnValue.CustomButton.Image = null;
+            this.txtTurnValue.CustomButton.Location = new System.Drawing.Point(27, 1);
+            this.txtTurnValue.CustomButton.Name = "";
+            this.txtTurnValue.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTurnValue.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTurnValue.CustomButton.TabIndex = 1;
+            this.txtTurnValue.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTurnValue.CustomButton.UseSelectable = true;
+            this.txtTurnValue.CustomButton.Visible = false;
+            this.txtTurnValue.Lines = new string[] {
+        "0.25"};
+            this.txtTurnValue.Location = new System.Drawing.Point(516, 376);
+            this.txtTurnValue.MaxLength = 32767;
+            this.txtTurnValue.Name = "txtTurnValue";
+            this.txtTurnValue.PasswordChar = '\0';
+            this.txtTurnValue.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTurnValue.SelectedText = "";
+            this.txtTurnValue.SelectionLength = 0;
+            this.txtTurnValue.SelectionStart = 0;
+            this.txtTurnValue.ShortcutsEnabled = true;
+            this.txtTurnValue.Size = new System.Drawing.Size(49, 23);
+            this.txtTurnValue.TabIndex = 9;
+            this.txtTurnValue.Text = "0.25";
+            this.txtTurnValue.UseSelectable = true;
+            this.txtTurnValue.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTurnValue.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnTurnRight
+            // 
+            this.btnTurnRight.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnTurnRight.Location = new System.Drawing.Point(657, 372);
+            this.btnTurnRight.Name = "btnTurnRight";
+            this.btnTurnRight.Size = new System.Drawing.Size(80, 30);
+            this.btnTurnRight.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnTurnRight.TabIndex = 13;
+            this.btnTurnRight.TabStop = false;
+            this.btnTurnRight.Text = "Turn Right";
+            this.btnTurnRight.UseSelectable = true;
+            this.btnTurnRight.Click += new System.EventHandler(this.btnTurnRight_Click);
+            // 
+            // btnTurnLeft
+            // 
+            this.btnTurnLeft.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnTurnLeft.Location = new System.Drawing.Point(571, 372);
+            this.btnTurnLeft.Name = "btnTurnLeft";
+            this.btnTurnLeft.Size = new System.Drawing.Size(80, 30);
+            this.btnTurnLeft.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnTurnLeft.TabIndex = 13;
+            this.btnTurnLeft.TabStop = false;
+            this.btnTurnLeft.Text = "Turn Left";
+            this.btnTurnLeft.UseSelectable = true;
+            this.btnTurnLeft.Click += new System.EventHandler(this.btnTurnLeft_Click);
             // 
             // Form1
             // 
@@ -1703,8 +1816,15 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.lblmeasuredDistance);
             this.Controls.Add(this.metroLabel000);
-            this.Controls.Add(this.btnValveTurnCCW);
-            this.Controls.Add(this.btnValveTurnCW);
+            this.Controls.Add(this.btnValve05CCW);
+            this.Controls.Add(this.btnTurnLeft);
+            this.Controls.Add(this.btnTurnRight);
+            this.Controls.Add(this.btnValve1CCW);
+            this.Controls.Add(this.btnValve05CW);
+            this.Controls.Add(this.txtTurnValue);
+            this.Controls.Add(this.btnValve1CW);
+            this.Controls.Add(this.metroLabel31);
+            this.Controls.Add(this.metroLabel30);
             this.Controls.Add(this.btnDistance);
             this.Controls.Add(this.btnOBSStart);
             this.Controls.Add(this.tidalTurbinePanel);
@@ -1847,13 +1967,20 @@
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroTextBox txtairspeedAs;
         private MetroFramework.Controls.MetroButton btnLiftbagOFF;
-        private MetroFramework.Controls.MetroButton btnValveTurnCW;
+        private MetroFramework.Controls.MetroButton btnValve1CW;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel valve1;
         private MetroFramework.Controls.MetroLabel valve4;
         private MetroFramework.Controls.MetroLabel valve3;
         private MetroFramework.Controls.MetroLabel valve2;
-        private MetroFramework.Controls.MetroButton btnValveTurnCCW;
+        private MetroFramework.Controls.MetroButton btnValve1CCW;
+        private MetroFramework.Controls.MetroButton btnValve05CCW;
+        private MetroFramework.Controls.MetroButton btnValve05CW;
+        private MetroFramework.Controls.MetroLabel metroLabel30;
+        private MetroFramework.Controls.MetroLabel metroLabel31;
+        private MetroFramework.Controls.MetroTextBox txtTurnValue;
+        private MetroFramework.Controls.MetroButton btnTurnRight;
+        private MetroFramework.Controls.MetroButton btnTurnLeft;
     }
 }
 
