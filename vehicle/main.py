@@ -124,8 +124,8 @@ def OBS_read():
             print("Error")
 
 def turn_valve(n):
-    angle_value = int(200 * n)
-    for x in range(angle_value):
+    n = int(n * 200)
+    for x in range(n):
         GPIO.output(STEP, GPIO.HIGH)
         sleep(delay)
         GPIO.output(STEP, GPIO.LOW)
