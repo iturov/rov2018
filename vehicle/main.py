@@ -153,13 +153,13 @@ while True:
     elif(recv_data == "b'OBSeBaglanKanka'"):
         OBS_read()
     elif('Turner' in recv_data): # Example: "b'Turner'Clock'0.5'"
-	if('Clock' in recv_data):
+        if('Clock' in recv_data):
             GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 1)
             turn_valve(float(recv_data.split("'")[4]))
             GPIO.output(4,GPIO.LOW) # Power OFF
-	elif('Counter' in recv_data):
-	    GPIO.output(4,GPIO.HIGH) # Power ON
+        elif('Counter' in recv_data):
+            GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 0)
             turn_valve(float(recv_data.split("'")[4]))
             GPIO.output(4,GPIO.LOW) # Power OFF
