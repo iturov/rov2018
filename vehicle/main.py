@@ -148,7 +148,7 @@ while True:
     print(recv_data)
     if(recv_data == "b'LiftbagiSalKanka'"):
         liftbagON()
-    elif(recv_data == "b'LiftbagiKapaKanka'):
+    elif(recv_data == "b'LiftbagiKapaKanka'""):
         liftbagOFF()
     elif(recv_data == "b'OBSeBaglanKanka'"):
         OBS_read()
