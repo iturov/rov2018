@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -1246,25 +1246,25 @@
             // 
             // OBSgraph
             // 
-            chartArea9.BorderColor = System.Drawing.Color.Transparent;
-            chartArea9.BorderWidth = 10;
-            chartArea9.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea9);
-            legend9.Enabled = false;
-            legend9.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend9);
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderWidth = 10;
+            chartArea1.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend1);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series9.BorderWidth = 3;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.CustomProperties = "IsXAxisQuantitative=False";
-            series9.IsVisibleInLegend = false;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            series9.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series9);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.CustomProperties = "IsXAxisQuantitative=False";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series1);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
@@ -1704,7 +1704,7 @@
             this.btnValve05CCW.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnValve05CCW.TabIndex = 13;
             this.btnValve05CCW.TabStop = false;
-            this.btnValve05CCW.Text = "0.5";
+            this.btnValve05CCW.Text = "1 / 2";
             this.btnValve05CCW.UseSelectable = true;
             this.btnValve05CCW.Click += new System.EventHandler(this.btnValve05CCW_Click);
             // 
@@ -1717,7 +1717,7 @@
             this.btnValve05CW.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnValve05CW.TabIndex = 13;
             this.btnValve05CW.TabStop = false;
-            this.btnValve05CW.Text = "0.5";
+            this.btnValve05CW.Text = "1 / 2";
             this.btnValve05CW.UseSelectable = true;
             this.btnValve05CW.Click += new System.EventHandler(this.btnValve05CW_Click);
             // 
@@ -1778,9 +1778,9 @@
             // btnTurnRight
             // 
             this.btnTurnRight.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnTurnRight.Location = new System.Drawing.Point(657, 372);
+            this.btnTurnRight.Location = new System.Drawing.Point(657, 363);
             this.btnTurnRight.Name = "btnTurnRight";
-            this.btnTurnRight.Size = new System.Drawing.Size(80, 30);
+            this.btnTurnRight.Size = new System.Drawing.Size(80, 50);
             this.btnTurnRight.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnTurnRight.TabIndex = 13;
             this.btnTurnRight.TabStop = false;
@@ -1791,9 +1791,9 @@
             // btnTurnLeft
             // 
             this.btnTurnLeft.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnTurnLeft.Location = new System.Drawing.Point(571, 372);
+            this.btnTurnLeft.Location = new System.Drawing.Point(571, 363);
             this.btnTurnLeft.Name = "btnTurnLeft";
-            this.btnTurnLeft.Size = new System.Drawing.Size(80, 30);
+            this.btnTurnLeft.Size = new System.Drawing.Size(80, 50);
             this.btnTurnLeft.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnTurnLeft.TabIndex = 13;
             this.btnTurnLeft.TabStop = false;
