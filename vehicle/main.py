@@ -156,12 +156,12 @@ while True:
         if('Clock' in recv_data):
             GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 1)
-            turn_valve(float(recv_data.split("'")[4]))
+            turn_valve(float(recv_data.split("'")[2].split("\"")[0]))
             GPIO.output(4,GPIO.LOW) # Power OFF
         elif('Counter' in recv_data):
             GPIO.output(4,GPIO.HIGH) # Power ON
             GPIO.output(DIR, 0)
-            turn_valve(float(recv_data.split("'")[4]))
+            turn_valve(float(recv_data.split("'")[2].split("\"")[0]))
             GPIO.output(4,GPIO.LOW) # Power OFF
     elif(recv_data == "b'Kill'"):
         DuzceSocketClient.kill()
