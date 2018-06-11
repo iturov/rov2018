@@ -72,7 +72,6 @@ class Client(object):
         try:
             self.recv_data = self.client_socket.recv(self.buffer_size)
             print("Receiving Data: ", self.recv_data)
-            #log("Receiving Data: " + self.recv_data)
             self.recv_data = str(self.recv_data)
             return self.recv_data
         except:
