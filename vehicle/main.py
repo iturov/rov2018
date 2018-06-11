@@ -127,9 +127,9 @@ def turn_valve(n):
     n = int(n * 200)
     for x in range(n):
         GPIO.output(STEP, GPIO.HIGH)
-        sleep(delay)
+        time.sleep(delay)
         GPIO.output(STEP, GPIO.LOW)
-        sleep(delay)
+        time.sleep(delay)
 
 # setup
 logpad = open("/home/pi/mate/log.txt", "w")
