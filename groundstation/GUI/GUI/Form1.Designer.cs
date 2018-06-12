@@ -663,13 +663,13 @@
             // btnLiftbagRelease
             // 
             this.btnLiftbagRelease.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagRelease.Location = new System.Drawing.Point(23, 359);
+            this.btnLiftbagRelease.Location = new System.Drawing.Point(149, 359);
             this.btnLiftbagRelease.Name = "btnLiftbagRelease";
             this.btnLiftbagRelease.Size = new System.Drawing.Size(120, 60);
             this.btnLiftbagRelease.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagRelease.TabIndex = 5;
             this.btnLiftbagRelease.TabStop = false;
-            this.btnLiftbagRelease.Text = "Lift Bag ON";
+            this.btnLiftbagRelease.Text = "Lift Bag OFF";
             this.btnLiftbagRelease.UseSelectable = true;
             this.btnLiftbagRelease.Click += new System.EventHandler(this.btnLiftbagRelease_Click);
             // 
@@ -1613,13 +1613,13 @@
             // btnLiftbagOFF
             // 
             this.btnLiftbagOFF.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnLiftbagOFF.Location = new System.Drawing.Point(161, 359);
+            this.btnLiftbagOFF.Location = new System.Drawing.Point(23, 359);
             this.btnLiftbagOFF.Name = "btnLiftbagOFF";
             this.btnLiftbagOFF.Size = new System.Drawing.Size(120, 60);
             this.btnLiftbagOFF.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnLiftbagOFF.TabIndex = 5;
             this.btnLiftbagOFF.TabStop = false;
-            this.btnLiftbagOFF.Text = "Lift Bag OFF";
+            this.btnLiftbagOFF.Text = "Lift Bag ON";
             this.btnLiftbagOFF.UseSelectable = true;
             this.btnLiftbagOFF.Click += new System.EventHandler(this.btnLiftbagOFF_Click);
             // 
