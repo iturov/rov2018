@@ -139,6 +139,7 @@ namespace GUI
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            mServer.SendTo("Kill");
             mServer.StopServer();
         }
         public double Integration(double t1, double t2, double a = 0, double b = 0, double c = 0, double d = 0)
