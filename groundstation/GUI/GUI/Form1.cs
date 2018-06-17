@@ -225,7 +225,7 @@ namespace GUI
             String lastLine = File.ReadLines(@"C:\Users\Public\ROV\recv.txt").Last();
             if(lastLine != "0000")
             {
-                log(lastLine.Split(':')[1].TrimEnd('D', 'A', 'T'));
+                log(lastLine);
             }
 
             if (lastLine.Contains("OBS"))
@@ -303,23 +303,24 @@ namespace GUI
 
         public void sendTurnCommand(string direction, string turn) //Example: "Turner'Clock'0.5"
         {
-            int value = Convert.ToInt32(lblDefaultPosition.Text);
+            double value = Convert.ToInt32(lblDefaultPosition.Text);
             if(direction == "Clock")
             {
-                value += Convert.ToInt32(turn);
+                value = value + Convert.ToDouble(turn);
                 lblDefaultPosition.Text = value.ToString();
                 mServer.SendTo("Turner'" + direction + "'" + turn);
             }
             else if (direction == "Counter")
             {
-                value += 1 - Convert.ToInt32(turn);
+                value = value + 1 - Convert.ToDouble(turn); 
                 lblDefaultPosition.Text = value.ToString();
                 mServer.SendTo("Turner'" + direction + "'" + turn);
             }
             else
             {
+                value = value - Convert.ToInt32(value);
                 mServer.SendTo("Turner'" + "Counter" + "'" + value.ToString());
-                value = 0;
+                value = 0.00;
                 lblDefaultPosition.Text = value.ToString();
             }
 

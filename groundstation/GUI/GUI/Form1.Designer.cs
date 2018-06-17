@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -580,6 +580,7 @@
             this.TabControlIPCams.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TabControlIPCams.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TabControlIPCams.UseSelectable = true;
+            this.TabControlIPCams.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // IPCAMPANEL1
             // 
@@ -1243,25 +1244,25 @@
             // 
             // OBSgraph
             // 
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderWidth = 10;
-            chartArea1.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend1);
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderWidth = 10;
+            chartArea2.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend2);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.CustomProperties = "IsXAxisQuantitative=False";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series1);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.CustomProperties = "IsXAxisQuantitative=False";
+            series2.IsVisibleInLegend = false;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series2);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
