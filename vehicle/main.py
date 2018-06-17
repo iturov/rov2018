@@ -116,8 +116,7 @@ def OBS_read():
             html = requests.get("http://192.168.4.1")
             soup = BeautifulSoup(html.text,"lxml")
             tempImport = soup.find("h3")
-            tempImport2 = str(tempImport)
-            Import = tempImport2[4:-5]
+            Import = str(tempImport)[4:-5]
             send("OBS: " + Import)
             log("OBS: " + Import)
             if "DATA" in Import:
