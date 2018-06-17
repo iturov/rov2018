@@ -127,10 +127,6 @@
             this.btnLiftbagOFF = new MetroFramework.Controls.MetroButton();
             this.btnValve1CW = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.valve1 = new MetroFramework.Controls.MetroLabel();
-            this.valve4 = new MetroFramework.Controls.MetroLabel();
-            this.valve3 = new MetroFramework.Controls.MetroLabel();
-            this.valve2 = new MetroFramework.Controls.MetroLabel();
             this.btnValve1CCW = new MetroFramework.Controls.MetroButton();
             this.btnValve05CCW = new MetroFramework.Controls.MetroButton();
             this.btnValve05CW = new MetroFramework.Controls.MetroButton();
@@ -139,6 +135,7 @@
             this.txtTurnValue = new MetroFramework.Controls.MetroTextBox();
             this.btnTurnRight = new MetroFramework.Controls.MetroButton();
             this.btnTurnLeft = new MetroFramework.Controls.MetroButton();
+            this.lblDefaultPosition = new System.Windows.Forms.Label();
             this.windSpeedPanel.SuspendLayout();
             this.TabControlIPCams.SuspendLayout();
             this.IPCAMPANEL1.SuspendLayout();
@@ -1645,42 +1642,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            // 
-            // valve1
-            // 
-            this.valve1.AutoSize = true;
-            this.valve1.Location = new System.Drawing.Point(273, 164);
-            this.valve1.Name = "valve1";
-            this.valve1.Size = new System.Drawing.Size(47, 19);
-            this.valve1.TabIndex = 20;
-            this.valve1.Text = "Valve 1";
-            // 
-            // valve4
-            // 
-            this.valve4.AutoSize = true;
-            this.valve4.Location = new System.Drawing.Point(522, 164);
-            this.valve4.Name = "valve4";
-            this.valve4.Size = new System.Drawing.Size(49, 19);
-            this.valve4.TabIndex = 20;
-            this.valve4.Text = "Valve 4";
-            // 
-            // valve3
-            // 
-            this.valve3.AutoSize = true;
-            this.valve3.Location = new System.Drawing.Point(522, 317);
-            this.valve3.Name = "valve3";
-            this.valve3.Size = new System.Drawing.Size(49, 19);
-            this.valve3.TabIndex = 20;
-            this.valve3.Text = "Valve 3";
-            // 
-            // valve2
-            // 
-            this.valve2.AutoSize = true;
-            this.valve2.Location = new System.Drawing.Point(271, 317);
-            this.valve2.Name = "valve2";
-            this.valve2.Size = new System.Drawing.Size(49, 19);
-            this.valve2.TabIndex = 20;
-            this.valve2.Text = "Valve 2";
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnValve1CCW
             // 
@@ -1801,15 +1763,22 @@
             this.btnTurnLeft.UseSelectable = true;
             this.btnTurnLeft.Click += new System.EventHandler(this.btnTurnLeft_Click);
             // 
+            // lblDefaultPosition
+            // 
+            this.lblDefaultPosition.AutoSize = true;
+            this.lblDefaultPosition.Location = new System.Drawing.Point(0, 0);
+            this.lblDefaultPosition.Name = "lblDefaultPosition";
+            this.lblDefaultPosition.Size = new System.Drawing.Size(13, 13);
+            this.lblDefaultPosition.TabIndex = 20;
+            this.lblDefaultPosition.Text = "0";
+            this.lblDefaultPosition.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.valve2);
-            this.Controls.Add(this.valve3);
-            this.Controls.Add(this.valve4);
-            this.Controls.Add(this.valve1);
+            this.Controls.Add(this.lblDefaultPosition);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblGyroValues);
             this.Controls.Add(this.logLabel);
@@ -1969,10 +1938,6 @@
         private MetroFramework.Controls.MetroButton btnLiftbagOFF;
         private MetroFramework.Controls.MetroButton btnValve1CW;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel valve1;
-        private MetroFramework.Controls.MetroLabel valve4;
-        private MetroFramework.Controls.MetroLabel valve3;
-        private MetroFramework.Controls.MetroLabel valve2;
         private MetroFramework.Controls.MetroButton btnValve1CCW;
         private MetroFramework.Controls.MetroButton btnValve05CCW;
         private MetroFramework.Controls.MetroButton btnValve05CW;
@@ -1981,6 +1946,7 @@
         private MetroFramework.Controls.MetroTextBox txtTurnValue;
         private MetroFramework.Controls.MetroButton btnTurnRight;
         private MetroFramework.Controls.MetroButton btnTurnLeft;
+        private System.Windows.Forms.Label lblDefaultPosition;
     }
 }
 

@@ -261,7 +261,7 @@ namespace GUI
                 }
                 else
                 {
-                    lblGyroValues.Text = lastLine.Split(':')[1].TrimEnd('D', 'A', 'T');
+                    lblGyroValues.Text = lastLine.Split(':')[1];
                 }
             }
         }
@@ -302,7 +302,26 @@ namespace GUI
 
         public void sendTurnCommand(string direction, string turn) //Example: "Turner'Clock'0.5"
         {
-            mServer.SendTo("Turner'"+ direction + "'" + turn);
+            int value = Convert.ToInt32(lblDefaultPosition.Text);
+            if(direction == "Clock")
+            {
+                value += Convert.ToInt32(turn);
+                lblDefaultPosition.Text = value.ToString();
+                mServer.SendTo("Turner'" + direction + "'" + turn);
+            }
+            else if (direction == "Counter")
+            {
+                value += 1 - Convert.ToInt32(turn);
+                lblDefaultPosition.Text = value.ToString();
+                mServer.SendTo("Turner'" + direction + "'" + turn);
+            }
+            else
+            {
+                mServer.SendTo("Turner'" + "Counter" + "'" + value.ToString());
+                value = 0;
+                lblDefaultPosition.Text = value.ToString();
+            }
+
         }
 
         private void btnValve1CCW_Click(object sender, EventArgs e)
@@ -333,6 +352,12 @@ namespace GUI
         private void btnTurnRight_Click(object sender, EventArgs e)
         {
             sendTurnCommand("Clock", txtTurnValue.Text);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Default Position
+            sendTurnCommand("None", "None");
         }
     }
 }
