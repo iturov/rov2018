@@ -14,7 +14,7 @@ data = ""
 loop = True
 DIR = 20   # Direction GPIO Pin
 STEP = 21  # Step GPIO Pin
-delay = .0008
+delay = .0028
 
 # Logging Code Block Begin
 def error_decorator(error_func):
