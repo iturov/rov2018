@@ -109,6 +109,7 @@ def liftbagOFF():
 
 def OBS_read():
     subprocess.call("sudo iwconfig wlan1 essid ESPap key s:123456789")
+    time.sleep(0.4)
     subprocess.call("sudo dhclient wlan1")
     while True:
         try:
@@ -117,10 +118,10 @@ def OBS_read():
             tempImport = soup.find("h3")
             tempImport2 = str(tempImport)
             Import = tempImport2[4:-5]
-            if "DATA" in Import:
-                break
             send("OBS: " + Import)
             log("OBS: " + Import)
+            if "DATA" in Import:
+                break
             time.sleep(0.2)
         except:
             print("Error")
