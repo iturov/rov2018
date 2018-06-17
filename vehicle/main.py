@@ -6,6 +6,7 @@ import requests
 import socket
 from datetime import datetime
 import RPi.GPIO as GPIO
+import subprocess
 
 # definitions
 recv_data = ""
@@ -107,6 +108,8 @@ def liftbagOFF():
         print("Error")
 
 def OBS_read():
+    subprocess.call("sudo iwconfig wlan1 essid ESPap key s:123456789")
+    subprocess.call("sudo dhclient wlan1")
     while True:
         try:
             html = requests.get("http://192.168.4.1")
