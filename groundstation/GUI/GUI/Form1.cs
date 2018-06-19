@@ -304,7 +304,7 @@ namespace GUI
 
         public void sendTurnCommand(string direction, string turn) //Example: "Turner'Clock'0.5"
         {
-            double value = Convert.ToInt32(lblDefaultPosition.Text);
+            double value = Convert.ToDouble(lblDefaultPosition.Text);
             if(direction == "Clock")
             {
                 value = value + Convert.ToDouble(turn);
