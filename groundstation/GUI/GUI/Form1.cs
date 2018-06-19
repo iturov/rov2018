@@ -229,7 +229,8 @@ namespace GUI
             }
 
             if (lastLine.Contains("OBS"))
-            {   
+            {
+                lblHTMLData.Text = lastLine;
                 if (lastLine.Contains("DATA:"))
                 {
                     try
@@ -257,7 +258,7 @@ namespace GUI
                     }
                     catch (Exception ekl)
                     {
-                        logLabel.Text = ekl.ToString();
+                        log(ekl.ToString());
                     }
                 }
                 else
