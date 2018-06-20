@@ -6,7 +6,6 @@ import requests
 import socket
 from datetime import datetime
 import RPi.GPIO as GPIO
-import subprocess
 
 # definitions
 recv_data = ""
