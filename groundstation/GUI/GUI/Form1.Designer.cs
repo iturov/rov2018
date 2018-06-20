@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -137,6 +137,10 @@
             this.btnTurnLeft = new MetroFramework.Controls.MetroButton();
             this.lblDefaultPosition = new System.Windows.Forms.Label();
             this.lblHTMLData = new MetroFramework.Controls.MetroLabel();
+            this.valve1 = new MetroFramework.Controls.MetroCheckBox();
+            this.valve2 = new MetroFramework.Controls.MetroCheckBox();
+            this.valve3 = new MetroFramework.Controls.MetroCheckBox();
+            this.valve4 = new MetroFramework.Controls.MetroCheckBox();
             this.windSpeedPanel.SuspendLayout();
             this.TabControlIPCams.SuspendLayout();
             this.IPCAMPANEL1.SuspendLayout();
@@ -180,7 +184,7 @@
             this.windSpeedPanel.HorizontalScrollbarSize = 10;
             this.windSpeedPanel.Location = new System.Drawing.Point(23, 42);
             this.windSpeedPanel.Name = "windSpeedPanel";
-            this.windSpeedPanel.Size = new System.Drawing.Size(233, 288);
+            this.windSpeedPanel.Size = new System.Drawing.Size(233, 294);
             this.windSpeedPanel.Style = MetroFramework.MetroColorStyle.Blue;
             this.windSpeedPanel.TabIndex = 1;
             this.windSpeedPanel.VerticalScrollbarBarColor = true;
@@ -1245,25 +1249,25 @@
             // 
             // OBSgraph
             // 
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderWidth = 10;
-            chartArea1.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend1);
+            chartArea4.BorderColor = System.Drawing.Color.Transparent;
+            chartArea4.BorderWidth = 10;
+            chartArea4.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend4);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.CustomProperties = "IsXAxisQuantitative=False";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series1);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.CustomProperties = "IsXAxisQuantitative=False";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series4.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series4);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
@@ -1783,11 +1787,71 @@
             this.lblHTMLData.Size = new System.Drawing.Size(0, 0);
             this.lblHTMLData.TabIndex = 18;
             // 
+            // valve1
+            // 
+            this.valve1.AutoSize = true;
+            this.valve1.Checked = true;
+            this.valve1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.valve1.Location = new System.Drawing.Point(264, 321);
+            this.valve1.Name = "valve1";
+            this.valve1.Size = new System.Drawing.Size(59, 15);
+            this.valve1.Style = MetroFramework.MetroColorStyle.Red;
+            this.valve1.TabIndex = 21;
+            this.valve1.Text = "Valve 1";
+            this.valve1.UseSelectable = true;
+            this.valve1.CheckedChanged += new System.EventHandler(this.valve1_CheckedChanged);
+            // 
+            // valve2
+            // 
+            this.valve2.AutoSize = true;
+            this.valve2.Checked = true;
+            this.valve2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.valve2.Location = new System.Drawing.Point(522, 321);
+            this.valve2.Name = "valve2";
+            this.valve2.Size = new System.Drawing.Size(59, 15);
+            this.valve2.Style = MetroFramework.MetroColorStyle.Red;
+            this.valve2.TabIndex = 21;
+            this.valve2.Text = "Valve 2";
+            this.valve2.UseSelectable = true;
+            this.valve2.CheckedChanged += new System.EventHandler(this.valve2_CheckedChanged);
+            // 
+            // valve3
+            // 
+            this.valve3.AutoSize = true;
+            this.valve3.Checked = true;
+            this.valve3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.valve3.Location = new System.Drawing.Point(522, 164);
+            this.valve3.Name = "valve3";
+            this.valve3.Size = new System.Drawing.Size(59, 15);
+            this.valve3.Style = MetroFramework.MetroColorStyle.Red;
+            this.valve3.TabIndex = 21;
+            this.valve3.Text = "Valve 3";
+            this.valve3.UseSelectable = true;
+            this.valve3.CheckedChanged += new System.EventHandler(this.valve3_CheckedChanged);
+            // 
+            // valve4
+            // 
+            this.valve4.AutoSize = true;
+            this.valve4.Checked = true;
+            this.valve4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.valve4.Location = new System.Drawing.Point(264, 164);
+            this.valve4.Name = "valve4";
+            this.valve4.Size = new System.Drawing.Size(59, 15);
+            this.valve4.Style = MetroFramework.MetroColorStyle.Red;
+            this.valve4.TabIndex = 21;
+            this.valve4.Text = "Valve 4";
+            this.valve4.UseSelectable = true;
+            this.valve4.CheckedChanged += new System.EventHandler(this.valve4_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.valve4);
+            this.Controls.Add(this.valve3);
+            this.Controls.Add(this.valve2);
+            this.Controls.Add(this.valve1);
             this.Controls.Add(this.lblDefaultPosition);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblHTMLData);
@@ -1959,6 +2023,10 @@
         private MetroFramework.Controls.MetroButton btnTurnLeft;
         private System.Windows.Forms.Label lblDefaultPosition;
         private MetroFramework.Controls.MetroLabel lblHTMLData;
+        private MetroFramework.Controls.MetroCheckBox valve1;
+        private MetroFramework.Controls.MetroCheckBox valve2;
+        private MetroFramework.Controls.MetroCheckBox valve3;
+        private MetroFramework.Controls.MetroCheckBox valve4;
     }
 }
 

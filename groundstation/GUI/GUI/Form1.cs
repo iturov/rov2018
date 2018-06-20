@@ -362,5 +362,29 @@ namespace GUI
             // Default Position
             sendTurnCommand("None", "None");
         }
+
+        private void valve3_CheckedChanged(object sender, EventArgs e)
+        {
+            valve3.Style = MetroFramework.MetroColorStyle.Green;
+            valve3.CheckState = CheckState.Checked;
+        }
+
+        private void valve4_CheckedChanged(object sender, EventArgs e)
+        {
+            valve4.Style = MetroFramework.MetroColorStyle.Green;
+            valve4.CheckState = CheckState.Checked;
+        }
+
+        private void valve2_CheckedChanged(object sender, EventArgs e)
+        {
+            valve2.Style = MetroFramework.MetroColorStyle.Green;
+            valve2.CheckState = CheckState.Checked;
+        }
+
+        private void valve1_CheckedChanged(object sender, EventArgs e)
+        {
+            valve1.Style = MetroFramework.MetroColorStyle.Green;
+            valve1.CheckState = CheckState.Checked;
+        }
     }
 }
