@@ -304,27 +304,33 @@ namespace GUI
 
         public void sendTurnCommand(string direction, string turn) //Example: "Turner'Clock'0.5"
         {
-            double value = Convert.ToDouble(lblDefaultPosition.Text);
-            if(direction == "Clock")
+            try
             {
-                value = value + Convert.ToDouble(turn);
-                lblDefaultPosition.Text = value.ToString();
-                mServer.SendTo("Turner'" + direction + "'" + turn);
+                double value = Convert.ToDouble(lblDefaultPosition.Text);
+                if (direction == "Clock")
+                {
+                    value = value + Convert.ToDouble(turn);
+                    lblDefaultPosition.Text = value.ToString();
+                    mServer.SendTo("Turner'" + direction + "'" + turn);
+                }
+                else if (direction == "Counter")
+                {
+                    value = value + 1 - Convert.ToDouble(turn);
+                    lblDefaultPosition.Text = value.ToString();
+                    mServer.SendTo("Turner'" + direction + "'" + turn);
+                }
+                else
+                {
+                    value = value - Convert.ToInt32(value);
+                    mServer.SendTo("Turner'" + "Counter" + "'" + value.ToString());
+                    value = 0.00;
+                    lblDefaultPosition.Text = value.ToString();
+                }
             }
-            else if (direction == "Counter")
+            catch (Exception)
             {
-                value = value + 1 - Convert.ToDouble(turn); 
-                lblDefaultPosition.Text = value.ToString();
-                mServer.SendTo("Turner'" + direction + "'" + turn);
+                // who cares
             }
-            else
-            {
-                value = value - Convert.ToInt32(value);
-                mServer.SendTo("Turner'" + "Counter" + "'" + value.ToString());
-                value = 0.00;
-                lblDefaultPosition.Text = value.ToString();
-            }
-
         }
 
         private void btnValve1CCW_Click(object sender, EventArgs e)
