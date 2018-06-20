@@ -108,7 +108,6 @@ def liftbagOFF():
         print("Error")
 
 def OBS_read():
-    subprocess.call("sudo dhclient wlan1")
     time.sleep(0.4)
     while True:
         try:
