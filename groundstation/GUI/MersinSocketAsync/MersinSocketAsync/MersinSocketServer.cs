@@ -73,7 +73,7 @@ namespace MersinSocketAsync
                 using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                 {
-                    file.WriteLine("\n" + logtime.ToString() + ex.ToString());
+                    file.WriteLine("\n" + logtime.ToString() + " " + ex.ToString());
                 }
             }
         }
@@ -95,7 +95,7 @@ namespace MersinSocketAsync
                 using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                 {
-                    file.WriteLine("\n" + logtime.ToString() + ex.ToString());
+                    file.WriteLine("\n" + logtime.ToString() + " " + ex.ToString());
                 }
             }
         }
