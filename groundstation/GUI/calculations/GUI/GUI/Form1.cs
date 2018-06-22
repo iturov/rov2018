@@ -98,7 +98,6 @@ namespace GUI
                 double V = double.Parse(txtV.Text);
                 double Cp = double.Parse(txtCp.Text);
 
-                A = Math.Pow(A / 2, 2) * Math.PI;
                 double power = N * (0.5) * (Ro * A * (Math.Pow(V, 3)) * Cp);
                 lblPower.Text = "Power: " + power.ToString("F2") + " Watt";
             }

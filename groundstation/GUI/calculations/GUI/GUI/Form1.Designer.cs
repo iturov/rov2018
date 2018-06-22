@@ -539,9 +539,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(198, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "R:";
+            this.label3.Text = "A:";
             // 
             // label2
             // 

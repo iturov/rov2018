@@ -62,3 +62,13 @@ D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.pdb
 D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.exe.config
 D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.exe
 D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.pdb
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\bin\Debug\GUI.exe.config
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\bin\Debug\GUI.exe
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\bin\Debug\GUI.pdb
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.Form1.resources
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.exe
+D:\GitHub\rov2018\groundstation\GUI\calculations\GUI\GUI\obj\Debug\GUI.pdb
