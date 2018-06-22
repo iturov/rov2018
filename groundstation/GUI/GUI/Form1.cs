@@ -274,11 +274,12 @@ namespace GUI
             {
                 double N = double.Parse(txtN.Text);
                 double Ro = double.Parse(txtRo.Text);
-                double A = double.Parse(txtA.Text);
+                double R = double.Parse(txtA.Text);
                 double V = double.Parse(txtV.Text);
                 double Cp = double.Parse(txtCp.Text);
-
-                double power = N * (0.5) * (Ro * A * (Math.Pow(V, 3)) * Cp);
+                double A = (R * R * 3.14159265) / 4;
+                double Vel = V * 0.51445;
+                double power = N * (0.5) * (Ro * A * (Math.Pow(Vel, 3)) * Cp);
                 lblPower.Text = "Power: " + power.ToString("F2") + " Watt";
             }
             catch (Exception ekl)
