@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.windSpeedPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
@@ -1249,25 +1249,25 @@
             // 
             // OBSgraph
             // 
-            chartArea4.BorderColor = System.Drawing.Color.Transparent;
-            chartArea4.BorderWidth = 10;
-            chartArea4.Name = "ChartArea1";
-            this.OBSgraph.ChartAreas.Add(chartArea4);
-            legend4.Enabled = false;
-            legend4.Name = "Legend1";
-            this.OBSgraph.Legends.Add(legend4);
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderWidth = 10;
+            chartArea1.Name = "ChartArea1";
+            this.OBSgraph.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.OBSgraph.Legends.Add(legend1);
             this.OBSgraph.Location = new System.Drawing.Point(3, 3);
             this.OBSgraph.Name = "OBSgraph";
             this.OBSgraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.CustomProperties = "IsXAxisQuantitative=False";
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 2;
-            this.OBSgraph.Series.Add(series4);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.CustomProperties = "IsXAxisQuantitative=False";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.OBSgraph.Series.Add(series1);
             this.OBSgraph.Size = new System.Drawing.Size(546, 279);
             this.OBSgraph.TabIndex = 2;
             this.OBSgraph.TabStop = false;
@@ -1336,9 +1336,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(198, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "R:";
+            this.label3.Text = "A:";
             // 
             // label2
             // 
@@ -1726,7 +1726,7 @@
             this.txtTurnValue.CustomButton.UseSelectable = true;
             this.txtTurnValue.CustomButton.Visible = false;
             this.txtTurnValue.Lines = new string[] {
-        "0.25"};
+        "0.10"};
             this.txtTurnValue.Location = new System.Drawing.Point(516, 376);
             this.txtTurnValue.MaxLength = 32767;
             this.txtTurnValue.Name = "txtTurnValue";
@@ -1738,7 +1738,7 @@
             this.txtTurnValue.ShortcutsEnabled = true;
             this.txtTurnValue.Size = new System.Drawing.Size(49, 23);
             this.txtTurnValue.TabIndex = 9;
-            this.txtTurnValue.Text = "0.25";
+            this.txtTurnValue.Text = "0.10";
             this.txtTurnValue.UseSelectable = true;
             this.txtTurnValue.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTurnValue.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

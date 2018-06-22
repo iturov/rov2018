@@ -120,7 +120,7 @@ namespace MersinSocketAsync
                     using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                     {
-                        file.WriteLine("\n" + logtime.ToString() + "Ready to read");
+                        file.WriteLine("\n" + logtime.ToString() + " Ready to read");
                     }
 
 
@@ -130,7 +130,7 @@ namespace MersinSocketAsync
                     using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                     {
-                        file.WriteLine("\n" + logtime.ToString() + "Returned: " + nRet.ToString());
+                        file.WriteLine("\n" + logtime.ToString() + " Returned: " + nRet.ToString());
                     }
 
 
@@ -141,7 +141,7 @@ namespace MersinSocketAsync
                         using (System.IO.StreamWriter file =
                         new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                         {
-                            file.WriteLine("\n" + logtime.ToString() + "Socket disconnected");
+                            file.WriteLine("\n" + logtime.ToString() + " Socket disconnected");
                         }
                         break;
                     }
@@ -156,7 +156,7 @@ namespace MersinSocketAsync
                     using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                     {
-                        file.WriteLine("\n" + logtime.ToString() + "Received: " + recvData);
+                        file.WriteLine("\n" + logtime.ToString() + " Received: " + recvData);
                     }
 
                     Array.Clear(buff, 0, buff.Length); //Clear buffer 
@@ -183,7 +183,7 @@ namespace MersinSocketAsync
                 using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                 {
-                    file.WriteLine("\n" + logtime.ToString() + string.Format("Client removed, count {0}", mClients.Count));
+                    file.WriteLine("\n" + logtime.ToString() + string.Format(" Client removed, count {0}", mClients.Count));
                 }
             }
         }
@@ -206,7 +206,7 @@ namespace MersinSocketAsync
                 using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:\Users\Public\ROV\logs.txt", true))
                 {
-                    file.WriteLine("\n" + logtime.ToString() + "Transmitted: " + leMessage);
+                    file.WriteLine("\n" + logtime.ToString() + " Transmitted: " + leMessage);
                 }
             }
             catch (Exception)

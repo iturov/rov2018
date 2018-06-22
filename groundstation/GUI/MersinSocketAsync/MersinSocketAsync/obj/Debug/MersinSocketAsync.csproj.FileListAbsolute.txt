@@ -4,3 +4,9 @@ C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinS
 C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.dll
 C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.pdb
 C:\Users\Enes\source\repos\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.csprojResolveAssemblyReference.cache
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\bin\Debug\MersinSocketAsync.dll
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\bin\Debug\MersinSocketAsync.pdb
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.csprojResolveAssemblyReference.cache
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.csproj.CoreCompileInputs.cache
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.dll
+D:\GitHub\rov2018\groundstation\GUI\MersinSocketAsync\MersinSocketAsync\obj\Debug\MersinSocketAsync.pdb

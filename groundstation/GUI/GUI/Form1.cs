@@ -53,7 +53,6 @@ namespace GUI
             timerModel.Interval = 200;
             timerModel.Start();
             mServer.StartListeningForIncomingConnection();
-            Process bengu = Process.Start("C://Users//Public//ROV//Distance//bengu.py");
         }
 
         private void logTimer_Tick(object sender, EventArgs e)
@@ -126,7 +125,8 @@ namespace GUI
         {
             try
             {
-                progressLoad(80);
+                Process bengu = Process.Start("C://Users//Public//ROV//Distance//bengu.py");
+                progressLoad(120);
                 String lastLine = File.ReadLines(@"C:\Users\Public\ROV\Distance\result.txt").Last();
                 log("Distance: " + lastLine);
                 lblmeasuredDistance.Text = lastLine;
@@ -238,10 +238,10 @@ namespace GUI
                         string[] strs = lastLine.Split(',');
                         lblGyroValues.Text = strs[0].Split(':')[1].TrimEnd('D', 'A', 'T');
                         strs[0] = strs[0].Split(':')[2];
-                        int[] nums = new int[16];
+                        double[] nums = new double[16];
                         for (int i = 0; i < 16; i++)
                         {
-                            nums[i] = Int32.Parse(strs[i]);
+                            nums[i] = Double.Parse(strs[i]);
                         }
                         var series = new Series("Seismograph");
                         series.ChartType = SeriesChartType.Spline;
@@ -278,7 +278,6 @@ namespace GUI
                 double V = double.Parse(txtV.Text);
                 double Cp = double.Parse(txtCp.Text);
 
-                A = Math.Pow(A / 2, 2) * Math.PI;
                 double power = N * (0.5) * (Ro * A * (Math.Pow(V, 3)) * Cp);
                 lblPower.Text = "Power: " + power.ToString("F2") + " Watt";
             }
