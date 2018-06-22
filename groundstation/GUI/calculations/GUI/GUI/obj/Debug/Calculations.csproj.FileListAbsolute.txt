@@ -1,0 +1,7 @@
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\Calculations.Form1.resources
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\Calculations.csproj.GenerateResource.Cache
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\Calculations.csproj.CoreCompileInputs.cache
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.exe
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.pdb
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\Calculations.csprojResolveAssemblyReference.cache

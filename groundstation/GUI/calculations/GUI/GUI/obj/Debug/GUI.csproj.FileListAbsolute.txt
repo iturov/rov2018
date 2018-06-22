@@ -1,0 +1,64 @@
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\GUI.exe.config
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\MetroFramework.Design.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\MetroFramework.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.exe
+C:\Users\Enes\source\repos\GUI\GUI\obj\Debug\GUI.pdb
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\MersinSocketAsync.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\MersinSocketAsync.pdb
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\Emgu.CV.World.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\ZedGraph.dll
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Enes\source\repos\GUI\GUI\bin\Debug\Emgu.CV.World.xml
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\GUI.exe.config
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\GUI.exe
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\GUI.pdb
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\Emgu.CV.UI.dll
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\MersinSocketAsync.dll
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\Emgu.CV.World.dll
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\ZedGraph.dll
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\Emgu.CV.UI.xml
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\MersinSocketAsync.pdb
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\bin\Debug\Emgu.CV.World.xml
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.Form1.resources
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.exe
+D:\GitHub\Blackout ROV\groundstation\GUI\GUI\obj\Debug\GUI.pdb
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\GUI.exe.config
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\GUI.exe
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\GUI.pdb
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\Emgu.CV.UI.dll
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\MersinSocketAsync.dll
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\Emgu.CV.World.dll
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\ZedGraph.dll
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\Emgu.CV.UI.xml
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\MersinSocketAsync.pdb
+D:\GitHub\rov2018\groundstation\GUI\GUI\bin\Debug\Emgu.CV.World.xml
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.Form1.resources
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.exe
+D:\GitHub\rov2018\groundstation\GUI\GUI\obj\Debug\GUI.pdb
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.Form1.resources
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.exe
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\obj\Debug\GUI.pdb
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.exe.config
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.exe
+D:\GitHub\Blackout ROV\calculations\GUI\GUI\bin\Debug\GUI.pdb
