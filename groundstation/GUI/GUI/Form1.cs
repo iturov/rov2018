@@ -53,6 +53,7 @@ namespace GUI
             timerModel.Interval = 200;
             timerModel.Start();
             mServer.StartListeningForIncomingConnection();
+            Process bengu = Process.Start("C://Users//Public//ROV//Distance//bengu.py");
         }
 
         private void logTimer_Tick(object sender, EventArgs e)
@@ -125,8 +126,7 @@ namespace GUI
         {
             try
             {
-                Process bengu = Process.Start("C://Users//Public//ROV//Distance//bengu.py");
-                progressLoad(100);
+                progressLoad(80);
                 String lastLine = File.ReadLines(@"C:\Users\Public\ROV\Distance\result.txt").Last();
                 log("Distance: " + lastLine);
                 lblmeasuredDistance.Text = lastLine;
@@ -293,7 +293,6 @@ namespace GUI
             try
             {
                 String lastLine = File.ReadLines(@"C:\Users\Public\ROV\OCR\model.txt").Last();
-                //log("Aircraft Model: " + lastLine);
                 lblAirCraftModel.Text = lastLine;
             }
             catch (Exception ekl)
@@ -327,9 +326,9 @@ namespace GUI
                     lblDefaultPosition.Text = value.ToString();
                 }
             }
-            catch (Exception)
+            catch (Exception ekl)
             {
-                // who cares
+                logLabel.Text = ekl.ToString();
             }
         }
 

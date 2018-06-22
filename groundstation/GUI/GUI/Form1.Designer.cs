@@ -1847,7 +1847,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.valve4);
             this.Controls.Add(this.valve3);
             this.Controls.Add(this.valve2);
@@ -1887,12 +1887,11 @@
             this.DisplayHeader = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1366, 768);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1364, 736);
+            this.MinimumSize = new System.Drawing.Size(10, 10);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
-            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.ShowIcon = false;
             this.Text = "ITU ROV Team GUI";
