@@ -90,7 +90,7 @@ def main():
                 file.write("F \n")
                 file.close()
 
-        """for i in licPlate.strChars:                          ##### Burdaki yorum kismini sadece yaziya odakli iken silin.
+        for i in licPlate.strChars:                          ##### Burdaki yorum kismini sadece yaziya odakli iken silin.
             
             if(i =="U" or  i=="H" or i=="8"):
                 file = open( "model.txt", "a")
@@ -120,7 +120,7 @@ def main():
             if(i =="A" or i =="2" or i =="X"):
                 file = open( "model.txt", "a")
                 file.write("F \n")
-                file.close()"""
+                file.close()
                 
                 
 
