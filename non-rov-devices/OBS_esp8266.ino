@@ -44,7 +44,7 @@ void setup() {
 	WiFi.softAP(ssid, password);
 
 	IPAddress myIP = WiFi.softAPIP();
-	Serial.print("AP IP address: ");
+	Serial.print("AP IP address:   ");
 	Serial.println(myIP);
 	server.on("/", handleRoot);
 	server.begin();
